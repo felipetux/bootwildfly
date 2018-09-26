@@ -18,6 +18,5 @@ public class HelloWildFlyController {
     public String getHoraOficial(){
         return ("horaoficial");        
        // return ("HoraOficial test");
-        
     }
 }
