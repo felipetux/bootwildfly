@@ -18,6 +18,6 @@ public class HelloWildFlyController {
     @RequestMapping("horaoficial")
     public String getHoraOficial(){
         System.out.println(dateFormat.format(now.getTime()))
-        return ("HoraOficial");
+        return ("HoraOficial test");
     }
 }
