@@ -7,7 +7,6 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class HelloWildFlyController {
     
-    final DateFormat dateFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm:ss");
 
 
     @RequestMapping("hello")
@@ -18,7 +17,8 @@ public class HelloWildFlyController {
     
     @RequestMapping("horaoficial")
     public String getHoraOficial(){
-        System.out.println(dateFormat.format(now.getTime()));
-        return ("HoraOficial test");
+        String timeStamp = new SimpleDateFormat("yyyyMMdd_HHmmss").format(Calendar.getInstance().getTime());
+       // return ("HoraOficial test");
+        return timeStamp;
     }
 }
